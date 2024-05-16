@@ -5,7 +5,7 @@
 ```mermaid
 classDiagram
     class Usuario {
-        ID: String
+        ID: UUID
         name: String
         personagem: Personagem
     }
@@ -19,11 +19,29 @@ classDiagram
         status: String
         movimento: String
         item: String
-        type: Type
     }
 
-    class Type {
-        type: String
+    class Mago {
+        vida: int
+        forca: int
+        magia: int
+        carisma: int
+        level: int
+        status: String
+        item: String
+    }
+
+    class Guerreiro {
+        vida: int
+        forca: int
+        magia: int
+        carisma: int
+        level: int
+        status: String
+        item: String
+    }
+
+    class Bardo {
         vida: int
         forca: int
         magia: int
@@ -36,6 +54,8 @@ classDiagram
     class Item {
         name: String
         forca: int
+        magia: int
+        carisma: int
         Descricao: String
     }
 
@@ -43,8 +63,10 @@ classDiagram
         tipo: String
     }
 
+    Personagem <|-- Guerreiro
+    Personagem <|-- Mago
+    Personagem <|-- Bardo
+
     Usuario *-- Personagem
-    Personagem --> Type
     Personagem --> Movimento : movimento
     Personagem --> Item : item
-    Type --> Item : item
