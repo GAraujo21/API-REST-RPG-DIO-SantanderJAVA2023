@@ -19,6 +19,9 @@ classDiagram
         status: String
         movimento: String
         item: String
+        atacar()
+        defender()
+        mover()
     }
 
     class Mago {
@@ -60,13 +63,29 @@ classDiagram
     }
 
     class Movimento {
-        tipo: String
+        +movimento(): void
+    }
+
+    class MovimentoNormal {
+        movimento()
+    }
+
+    class MovimentoAgressivo {
+        movimento()
+    }
+
+    class MovimentoDefensivo {
+        movimento()
     }
 
     Personagem <|-- Guerreiro
     Personagem <|-- Mago
     Personagem <|-- Bardo
 
-    Usuario *-- Personagem
-    Personagem --> Movimento : movimento
-    Personagem --> Item : item
+    Movimento <|-- MovimentoNormal
+    Movimento <|-- MovimentoAgressivo
+    Movimento <|-- MovimentoDefensivo
+
+    Usuario "0..1" *-- "1" Personagem
+    Personagem "1" --> "0..N" Movimento : movimento
+    Personagem "0..1" --> "0..N" Item : item
