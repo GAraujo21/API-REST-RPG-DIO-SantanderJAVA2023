@@ -1,4 +1,6 @@
-# API-REST-RPG-DIO-SantanderJAVA2023
+# API REST Santander Bootcamp Java 2023
+
+API desenvolvida duarante o bootcamp Santander, realizado pela plataforma de estudos DIO. Logo em seguida, demontro o diagrama de classes que utilizei para seguir este projeto. A ideia é uma base para um jogo RPG, havendo alguns tipos de personagens, movimentos e itens. Por enquanto seguirei está ideia, mas com o pensamento de ampliar a complexidade do trabalho.
 
 ## Diagrama de Classes
 
