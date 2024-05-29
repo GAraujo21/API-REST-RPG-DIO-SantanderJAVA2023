@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Min;
 import lombok.*;
+import me.finalprojectsantanderjava2023.Entities.Item;
+import me.finalprojectsantanderjava2023.Entities.Moviment.Moviment;
 
 @EqualsAndHashCode(callSuper = true) // necessario trazê-lo por ser uma subclasse.
 @Data
@@ -14,7 +16,7 @@ import lombok.*;
 public class Mage extends Character {
 
     @Builder
-    public Mage(@Min(1) int level, String status, String movement, String item) {
+    public Mage(@Min(1) int level, String status, Moviment movement, Item item) {
         super(50, 5, 20, 5, level, status, movement, item);
     }
 

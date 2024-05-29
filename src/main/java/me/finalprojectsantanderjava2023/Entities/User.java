@@ -22,6 +22,6 @@ public class User {
     @Column(name = "user_name", nullable = false)
     private String name;
 
-    @Column(name = "user_character")
+    @OneToOne(mappedBy = "user_character", cascade = CascadeType.ALL)
     private Character character;
 }

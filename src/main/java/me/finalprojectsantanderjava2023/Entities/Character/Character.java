@@ -1,13 +1,14 @@
 package me.finalprojectsantanderjava2023.Entities.Character;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import me.finalprojectsantanderjava2023.Entities.Item;
+import me.finalprojectsantanderjava2023.Entities.Moviment.Moviment;
+import me.finalprojectsantanderjava2023.Entities.User;
 
 @Data
 @Builder
@@ -16,6 +17,10 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "character")
 public class Character {
+
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User usuario;
 
     @Column(name = "character_life")
     private int life;
@@ -37,7 +42,7 @@ public class Character {
     private String status; //n me recordo o que queria aqui;
 
     @Column(name = "character_movement")
-    private Movement movement;
+    private Moviment movement;
 
     @Column(name = "character_item")
     private Item item; // pode ser um enum, já que por enquanto só terei 3 itens fixos.
