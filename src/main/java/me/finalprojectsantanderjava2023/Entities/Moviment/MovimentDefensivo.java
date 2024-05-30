@@ -7,7 +7,7 @@ import lombok.*;
 @EqualsAndHashCode(callSuper = true) // O @Data cria os contrutores, mas sem chamar o super();
 @Data
 @Builder
-@NoArgsConstructor
+//@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @DiscriminatorValue("Defensivo")
