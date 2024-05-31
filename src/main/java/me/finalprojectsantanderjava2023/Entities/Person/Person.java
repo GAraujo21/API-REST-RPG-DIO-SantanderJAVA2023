@@ -23,7 +23,7 @@ public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "person_id", nullable = false)
-    private int id;
+    private Long id;
 
     @OneToOne
     @JoinColumn(name = "game_user_id", nullable = false)

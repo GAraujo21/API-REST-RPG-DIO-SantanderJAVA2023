@@ -19,7 +19,7 @@ public abstract class Moviment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "moviment_id", nullable = false)
-    private int id;
+    private Long id;
 
     @OneToOne
     @JoinColumn(name = "person_id", nullable = false)

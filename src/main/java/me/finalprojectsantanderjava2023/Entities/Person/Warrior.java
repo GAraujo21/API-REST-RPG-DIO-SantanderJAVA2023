@@ -19,7 +19,7 @@ import me.finalprojectsantanderjava2023.Entities.GameUser;
 public class Warrior extends Person {
 
     //@Builder
-    public Warrior(int id, GameUser user, @Min(1) int level, String status, Moviment movement, Item item) {
+    public Warrior(Long id, GameUser user, @Min(1) int level, String status, Moviment movement, Item item) {
         super(id, user, 70, 25, 0, 1, level, status, movement, item);
     }
 

@@ -19,7 +19,7 @@ import me.finalprojectsantanderjava2023.Entities.GameUser;
 //@Table(name = "bard")
 public class Bard extends Person {
     //@Builder
-    public Bard(int id, GameUser user, @Min(1) int level, String status, Moviment movement, Item item) {
+    public Bard(Long id, GameUser user, @Min(1) int level, String status, Moviment movement, Item item) {
         super(id, user, 30, 5, 2, 30, level, status, movement, item);
     }
 
