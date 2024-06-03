@@ -6,12 +6,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Min;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import me.finalprojectsantanderjava2023.Entities.Item;
 import me.finalprojectsantanderjava2023.Entities.Moviment.Moviment;
 import me.finalprojectsantanderjava2023.Entities.GameUser;
 
 @EqualsAndHashCode(callSuper = true) // necessario trazê-lo por ser uma subclasse.
 @Data
+@SuperBuilder
 @AllArgsConstructor
 //@NoArgsConstructor
 @Entity

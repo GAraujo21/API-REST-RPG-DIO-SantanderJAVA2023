@@ -6,12 +6,14 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 import me.finalprojectsantanderjava2023.Entities.Item;
 import me.finalprojectsantanderjava2023.Entities.Moviment.Moviment;
 import me.finalprojectsantanderjava2023.Entities.GameUser;
 
 @Data
-@Builder
+@SuperBuilder // por ter herança, o superbuilder auxilia nos contrutores das classes filhas
+//@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) // Como tem herança, essa anotação indica que no banco, só havera UMA tabela com as classes pai e filhas
@@ -43,6 +45,7 @@ public class Person {
 
     @Column(name = "person_level")
     @Min(1)
+    @Builder.Default
     private int level = 1;
 
     @Column(name = "person_status")
