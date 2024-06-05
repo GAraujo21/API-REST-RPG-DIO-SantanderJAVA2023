@@ -4,10 +4,11 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 import me.finalprojectsantanderjava2023.Entities.Person.Person;
 
 @Data
-//@Builder
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) // Como tem herança, essa anotação indica que no banco, só havera UMA tabela com as classes pai e filhas

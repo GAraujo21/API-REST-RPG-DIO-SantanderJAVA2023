@@ -4,10 +4,11 @@ import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @EqualsAndHashCode(callSuper = true) // O @Data cria os contrutores, mas sem chamar o super();
 @Data
-@Builder
+@SuperBuilder
 //@NoArgsConstructor
 @AllArgsConstructor
 @Entity
